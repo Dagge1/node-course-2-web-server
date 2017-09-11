@@ -4,6 +4,7 @@ const express = require('express');
 const hbs = require('hbs');  // handlebars, view engine za Express (dinamičke stranice)
 const fs = require('fs');  // file system za snimiti log i GET requeste u fajl (ne treba)
 
+const port = process.env.PORT || 3000; // ako je vanjski server onda lijevo ako je localhost onda je 3000
 var app = express();   // kreiranje express aplikacije (metode)
 
 // Express middleware kojim tweakamo Express prema potrebi, za prikaz stranica u direktoriju
@@ -73,8 +74,8 @@ app.get('/bad', (req, res) => {
     
 });
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000');
+app.listen(port, () => {
+    console.log('Server is up on port ' + port);
 });
 // kada je app.listen() pokrenuta aplikacija stalno sluša (listen) naše requeste. Isključim je u CLI sa Ctrl + C
 // listener spaja našu aplikaciju sa portom na local kompjuteru ili serveru (za localhost 3000)
