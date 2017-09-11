@@ -68,6 +68,13 @@ app.get('/about', (req, res) => { // about.hbs se nalazi u /views, render. dinam
     });    
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+       
+        pageTitle: 'Projects'
+    }); 
+});
+
 // get request za error stranicu /bad, response je JSON poruka
 app.get('/bad', (req, res) => {
     res.send({errorMessage: 'Something went wrong'});
