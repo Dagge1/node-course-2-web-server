@@ -1,0 +1,27 @@
+<html>  <!-- proba sa mojim script dijelom za ubacivanje teksta, radi iako je .hbs-->
+<!-- da bi radilo treba primijeniti i u server.js da bude home2.hbs a ne home -->
+    <head>
+        <meta charset="utf-8">
+        <title>Home page</title>
+    </head>
+
+    <body>
+        <script>
+            function proba() {
+                var oznaci = document.getElementById('radi');
+                oznaci.innerHTML = 'Hej kako je';
+            }; 
+        </script>
+        
+        <h2>{{pageTitle}}</h2>  
+
+        <p onclick="proba()">{{welcomeMessage}}</p>
+        <p id="radi"></p>      <!-- prikaži tekst iz funkcije u script dijelu -->
+
+       
+        
+        <footer>
+            <p>Copyright {{currentYear}}</p>  <!-- dinamički podaci za ovaj templ. page su određeni u server.js -->
+        </footer>
+    </body>
+</html> 

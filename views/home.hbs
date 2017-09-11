@@ -1,0 +1,15 @@
+<html>  <!-- proba sa mojim script dijelom za ubacivanje teksta, radi iako je .hbs-->
+    <head>
+        <meta charset="utf-8">
+        <title>Home page</title>       
+    </head>
+
+    <body>
+
+        {{> header}}    <!-- partials header.hbs (umjesto headera ovdje je tamo) --> 
+
+        <p>{{screamIt welcomeMessage}}</p>  <!--uzima message i stavlja toUppercase -->
+        
+        {{> footer}}    <!-- partials (reusable) kod footer.hbs -->
+    </body>
+</html> 
