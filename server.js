@@ -89,3 +89,7 @@ app.listen(port, () => {
 // u browseru pokrećemo localhost:3000 To će pokrenuti root dir web stranice
 // funkcija kao argument je opciona, u CLI prikazuje poruku dok čekamo da server starta
 
+// re Github projekt pregledamo sa CLI 'git status'  ... a dodamo nove fajlove i updatamo stare sa 'git add .'
+// Komanda 'git commit -m "Add project page" će dodati obnovljene stranice na Github
+// Na kraju se ubacuje u Github sa 'git push'
+// Na kraju promjene postamo na cloud server Heroku, iz CLI 'git push heroku'
